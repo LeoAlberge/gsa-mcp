@@ -12,7 +12,7 @@ from gsa_mcp.validation import require_non_empty, validate_gwa_command, validate
 def register(mcp: FastMCP, client: GsaComClient) -> None:
     """Register GWA and utility tools."""
 
-    @mcp.to ol()
+    @mcp.tool()
     def gsa_gwa_command(command: str) -> dict[str, object]:
         """Execute raw GWA command string."""
         try:
